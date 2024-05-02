@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="header">
+        <div class="logoContainer">
+            <img src="/img/logo.png" alt="Logo" class="logo">
+        </div>
+        <nav class="nav">
+            <a class="link" href="/Inicio">Inicio</a>
+            <a class="link" href="/Sobre">Sobre</a>
+            <a class="link" href="/contato">Contato</a>
+        </nav>
+        <a class="cta" href="/comprar">Peça Já</a>
+
+        <input type="checkbox" id="menu-toggle" class="menuToggle">
+        <div class="modal">
+            <nav class="nav">
+                <div class="logoContainer">
+                    <img src="/img/logo.png" alt="Logo" class="logo">
+                </div>
+                <div class="navmobile">
+                    <a href="/Inicio" class="link">Inicio</a>
+                    <a href="/Sobre" class="link">Sobre</a>
+                    <a href="/contato" class="link">Contato</a>
+                </div>
+                <a href="/comprar" class="ctamobile">Peça Já</a>
+            </nav>
+        </div>
+        <label for="menu-toggle" class="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    </header>
+    <section class="carousel">
+        <div class="carousel-item">
+          <img src="imagem1.jpg" alt="Imagem 1">
+          <div class="carousel-caption">
+            <h2>Título 1</h2>
+            <p>Descrição 1</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="imagem2.jpg" alt="Imagem 2">
+          <div class="carousel-caption">
+            <h2>Título 2</h2>
+            <p>Descrição 2</p>
+          </div>
+        </div>
+        <!-- Adicione mais itens aqui -->
+      </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

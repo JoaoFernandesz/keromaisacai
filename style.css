@@ -1,0 +1,240 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #660273;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    height: 110px;
+    margin-left: 20%;
+}
+
+.nav,
+.modal .nav {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+}
+
+.nav {
+    font-size: 1.4em;
+}
+
+
+.nav a {
+    margin: 0 10px;
+    color: #F2F2F2;
+    text-decoration: none;
+    /* font-size: 1.3em; */
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.link,
+.cta {
+    margin: 0 10px;
+    color: #F2F2F2;
+    text-decoration: none;
+    font-size: 1.2em;
+    z-index: 199;
+}
+
+.cta {
+    padding: 5px 10px;
+    background-color: #C7D943;
+    color: #660273;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.cta:hover {
+    background-color: #F2F2F2;
+    color: #660273;
+}
+
+.menuToggle {
+    display: none;
+}
+
+/* muda o comportamento dos links da nav quando o mouse passa em cima */
+.link:hover {
+    color: #C7D943;
+    cursor: pointer;
+}
+
+.menuIcon {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 101;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block;
+    }
+
+    .nav,
+    .cta {
+        display: none;
+    }
+
+    .modal .nav {
+        background-color: #660273;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* Distribui o espaço igualmente */
+        align-items: center;
+        /* Centraliza horizontalmente */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .navmobile {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 1.2em;
+        color: #F2F2F2;
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: #660273;
+        color: #F2F2F2;
+    }
+
+    .logo {
+        height: 80px;
+        margin-left: 0px;
+    }
+
+    .navmobile a {
+        margin-top: 20px;
+    }
+
+    .nav .logo {
+        height: 120px;
+        margin-left: 0px;
+    }
+
+    .modal .logoContainer {
+        width: 100%;
+        /* Assume a largura total do container */
+        margin-top: 10%;
+        /* Espaço no topo */
+        display: flex;
+        justify-content: center;
+        /* Centraliza horizontalmente */
+    }
+
+    .modal .nav>a {
+        width: 100%;
+        /* Largura total dentro da nav */
+        text-align: center;
+        /* Texto centralizado */
+    }
+
+    .menuToggle:checked~.modal {
+        display: block;
+        opacity: 1;
+    }
+
+    .menuToggle:checked~.modal .nav {
+        transform: translateX(0%);
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menuIcon span {
+        display: block;
+        background-color: #F2F2F2;
+        height: 3px;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menuToggle:checked~.menuIcon span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menuToggle:checked~.menuIcon span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menuToggle:checked~.menuIcon span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .ctamobile {
+        display: block;
+        margin: 0 10px;
+        color: #F2F2F2;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 1.8em;
+        font-weight: bold;
+        background-color: #C7D943;
+        color: #660273;
+        border-radius: 5px;
+
+    }
+}
